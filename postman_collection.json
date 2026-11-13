@@ -1,0 +1,53 @@
+{
+  "info": {
+    "name": "API Usuarios - Practica 3",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Registrar usuario",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": { "raw": "http://localhost:3000/usuarios", "host": ["http://localhost:3000"], "path": ["usuarios"] },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Julio Perez\",\n  \"email\": \"julio.perez@example.com\",\n  \"edad\": 22\n}"
+        }
+      }
+    },
+    {
+      "name": "Consultar usuarios",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:3000/usuarios", "host": ["http://localhost:3000"], "path": ["usuarios"] }
+      }
+    },
+    {
+      "name": "Consultar usuario por ID",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:3000/usuarios/1", "host": ["http://localhost:3000"], "path": ["usuarios", "1"] }
+      }
+    },
+    {
+      "name": "Actualizar usuario",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": { "raw": "http://localhost:3000/usuarios/1", "host": ["http://localhost:3000"], "path": ["usuarios", "1"] },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"edad\": 23\n}"
+        }
+      }
+    },
+    {
+      "name": "Eliminar usuario",
+      "request": {
+        "method": "DELETE",
+        "url": { "raw": "http://localhost:3000/usuarios/1", "host": ["http://localhost:3000"], "path": ["usuarios", "1"] }
+      }
+    }
+  ]
+}
